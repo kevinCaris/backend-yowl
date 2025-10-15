@@ -56,12 +56,12 @@ class ReviewController extends Controller
      */
     public function store(Request $request): JsonResponse
     {
-        // $request->validate([
-        //     'product_name' => 'required|string|max:255',
-        //     'product_link' => 'nullable|url',
-        //     'product_image' => 'nullable|url',
-        //     'content' => 'required|string|min:10',
-        // ]);
+        $request->validate([
+            'product_name' => 'required|string|max:255',
+            'product_link' => 'nullable|url',
+            'product_image' => 'nullable|url',
+            'content' => 'required|string|min:10',
+        ]);
 
         // Log::info($request);
 
